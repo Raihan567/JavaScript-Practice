@@ -31,6 +31,7 @@ const matrixD = [
   [5, 2, 8, 9],
 ];
 
+/* Multiply Matrix */
 const matrixE = [
   [3, 2, 3, 9],
   [6, 7, 8, 7],
