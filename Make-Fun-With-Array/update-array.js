@@ -20,7 +20,6 @@ names[1] = "Sara Mony";
 names[2] = "Sumaiya Afrin";
 
 console.log(names);
-// console.log();
 
 // Simple tic toe project
 const response = new Array(9);
