@@ -1,13 +1,13 @@
 // Matrix example
 const matrixA = [
-  [1, 3],
-  [3, 3],
-  [5, 2],
+  [1, 3, 7],
+  [3, 3, 5],
+  [5, 2, 8],
 ];
 const matrixB = [
-  [3, 2],
-  [6, 2],
-  [7, 1],
+  [3, 2, 3],
+  [6, 2, 4],
+  [7, 1, 7],
 ];
 
 const matrixSum = (matrixA, matrixB) => {
