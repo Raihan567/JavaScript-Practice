@@ -15,4 +15,4 @@ function toArray() {
 }
 const argArray = toArray(1, 2, 3, 4, 5, "test", "example");
 console.log(argArray);
-// console.log(argArray.__proto__.constructor);
+console.log(argArray.__proto__.constructor);
