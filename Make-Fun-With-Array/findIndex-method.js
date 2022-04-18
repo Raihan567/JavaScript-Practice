@@ -29,3 +29,6 @@ const result = [
 const highest2 = 98;
 const student = result.find((item) => item.score === highest2);
 console.log(student);
+
+const names = ["stack", "learner", "and", "stack", "school"];
+console.log(names.join(' '));
