@@ -55,6 +55,12 @@ function base(b) {
     return result;
   };
 }
-let power = base(2);
-let square = power(2);
+// let power = base(2);
+// let square = power(2);
+// console.log(square);
+
+let square = base(2)(8);
 console.log(square);
+
+let cube = base(3)(5);
+console.log(cube);
