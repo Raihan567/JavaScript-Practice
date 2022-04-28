@@ -14,3 +14,4 @@ var teacher = new Person();
 var name = teacher.name;
 console.log(name);
 Teacher();
+ 
