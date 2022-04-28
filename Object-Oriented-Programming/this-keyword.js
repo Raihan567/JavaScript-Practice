@@ -1,47 +1,47 @@
-// /**
-//  * Title: This keyword...
-//  */
-// let person = {
-//   name: "Abu Raihan",
-//   print: function () {
-//     // console.log(this);
-//     console.log(`name: ${this.name}`);
-//   },
-// };
+/**
+ * Title: This keyword...
+ */
+let person = {
+  name: "Abu Raihan",
+  print: function () {
+    // console.log(this);
+    console.log(`name: ${this.name}`);
+  },
+};
 
-// // function myFunc() {
-// //   function inner() {
-// //     console.log(this);
-// //   }
-// //   inner();
-// // }
-// // myFunc();
-// let myPrint = person.print.bind(person);
-// // console.log(myPrint);
-// myPrint();
+function myFunc() {
+  function inner() {
+    console.log(this);
+  }
+  inner();
+}
+myFunc();
+let myPrint = person.print.bind(person);
+// console.log(myPrint);
+myPrint();
 
-// // function add(num) {
-// //   return this.value + num;
-// // }
-// // let obj = {
-// //   value: 10,
-// // };
-// // let obj2 = {
-// //   value: 30,
-// // };
-// // let binned = add.bind(obj2);
-// // console.log(binned(40));
+function add(num) {
+  return this.value + num;
+}
+let obj = {
+  value: 10,
+};
+let obj2 = {
+  value: 30,
+};
+let binned = add.bind(obj2);
+console.log(binned(40));
 
-// let person2 = {
-//   name: "Abu Raihan",
-//   print: function () {
-//     setTimeout(() => {
-//       console.log(this);
-//       console.log(`Hello ${this.name}, What's up?`);
-//     }, 2000);
-//   },
-// };
-// person2.print();
+let person2 = {
+  name: "Abu Raihan",
+  print: function () {
+    setTimeout(() => {
+      console.log(this);
+      console.log(`Hello ${this.name}, What's up?`);
+    }, 2000);
+  },
+};
+person2.print();
 
 /**
  * Title: Learn with Sumit "This-keyword"
@@ -54,12 +54,12 @@ var sakib = {
     console.log(this.name);
   },
 };
-// sakib.printPlayerName(); // Implicit binding [it's only work for normal function not arrow function.]
+sakib.printPlayerName(); // Implicit binding [it's only work for normal function not arrow function.]
 
 // Example: 1
 var printPlayerNameFunction = function (obj) {
   obj.printPlayerName = function () {
-    // console.log(this.name);
+    console.log(this.name);
   };
 };
 
@@ -83,7 +83,7 @@ var Person = function (name, age) {
     name: name,
     age: age,
     printName: function () {
-      // console.log(this.name);
+      console.log(this.name);
     },
   };
 };
@@ -96,12 +96,12 @@ var Person = function (name, age) {
     name: name,
     age: age,
     printName: function () {
-      // console.log(this.name);
+      console.log(this.name);
     },
     father: {
       name: "Mr. XXX",
       printName: function () {
-        // console.log(this.name);
+        console.log(this.name);
       },
     },
   };
@@ -115,7 +115,7 @@ sakib.father.printName();
  */
 // Example: 1
 var printName = function (v1, v2, v3) {
-  // console.log(`${this.name} is a ${v1}, ${v2} & ${v3}`);
+  console.log(`${this.name} is a ${v1}, ${v2} & ${v3}`);
 };
 var sakib = {
   name: "Raihan",
@@ -129,7 +129,7 @@ printName.call(sakib, v1, v2, v3);
 // Example: 2
 
 var printName = function (v1, v2, v3) {
-  // console.log(`${this.name} is a ${v1}, ${v2} & ${v3}`);
+  console.log(`${this.name} is a ${v1}, ${v2} & ${v3}`);
 };
 var sakib = {
   name: "Raihan",
@@ -149,7 +149,7 @@ printName.apply(sakib, [v1, v2, v3]);
 function Person1(name, age) {
   this.name = name;
   this.age = age;
-  // console.log(`${name} is ${age} years old`);
+  console.log(`${name} is ${age} years old`);
 }
 
 var result = new Person1("Raihan", 19);
@@ -164,4 +164,4 @@ var printName1 = function () {
 var sakib = {
   name: "sakib",
 };
-printName1(); //refer to window object
+printName1() //refer to window object
