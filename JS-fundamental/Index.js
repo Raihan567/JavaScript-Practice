@@ -248,3 +248,105 @@ const reversed = points.sort(function (a, b) {
 });
 
 console.log(reversed);
+
+const cars = [
+  { type: "Volvo", year: 2016 },
+  { type: "Saab", year: 2001 },
+  { type: "BMW", year: 2010 },
+];
+
+const sortedCars = cars.sort(function (a, b) {
+  return a.year - b.year;
+});
+
+console.log(sortedCars);
+
+const sortedCar = cars.sort(function (a, b) {
+  let x = a.type.toLocaleLowerCase();
+  let y = b.type.toLocaleLowerCase();
+
+  if (x > y) {
+    return 1;
+  }
+
+  if (x < y) {
+    return -1;
+  }
+  return 0;
+});
+
+console.log(sortedCar);
+
+// console.log(Math.floor(Math.random() * 10) + 1);
+
+function getRandomInteger(max, min) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+console.log(getRandomInteger(0, 10));
+
+switch (new Date().getDay()) {
+  case 0:
+    console.log((day = "Sunday"));
+    break;
+  case 1:
+    console.log((day = "Monday"));
+    break;
+  case 2:
+    console.log((day = "Tuesday"));
+    break;
+  case 3:
+    console.log((day = "Wednesday"));
+    break;
+  case 4:
+    console.log((day = "Thursday"));
+    break;
+  case 5:
+    console.log((day = "Friday"));
+    break;
+  case 6:
+    console.log((day = "Saturday"));
+}
+
+const person2 = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  myFunction: function () {
+    return this;
+  },
+};
+
+console.log(person2.myFunction());
+
+const person3 = {
+  firstName: "John",
+  lastName: "Doe",
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  },
+};
+
+const another = {
+  firstName: "Abu",
+  lastName: "Raihan",
+};
+let fullName = person3.fullName.apply(another);
+
+console.log(fullName);
+
+let hello = "";
+hello = (val) => {
+  "Hello" + val;
+};
+
+let ss = "helo";
+ss = 5;
+
+console.log(ss);
+console.log(typeof ss);
+
+let xs = "hello";
+
+const fruit = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruit.slice(0, 1));
